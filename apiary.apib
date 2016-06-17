@@ -11,7 +11,7 @@ Questions
 
 + Response 200 (application/json)
 
-       { "questions":[
+        { "questions":[
             {
                 "question": "question 1?",
                 "input_type": "text",
@@ -24,20 +24,27 @@ Questions
             {
                 
                 "question": "question 2?",
-                "input_type": "radio",
+                "input_type":"radio",
                 "mandatory":false,
-                "answer":""
-                    
-            },
+                "answer":"",
+                "options":[
+                             {"id":"Male"},
+                             {"id":"Female"}
+                         ]
+         },
+               
         
             {
-                
                 "question": "question 3?",
                 "input_type": "checkbox",
                 "mandatory":true,
-                "answer":""
-                    
-            },
+                "answer":"",
+                "options":[
+                             {"id":"Home Address"},
+                             {"id":"Office Address"}
+                         ]
+              },
+              
             {
                 
                 "question": "question 4?",
