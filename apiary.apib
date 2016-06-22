@@ -1,66 +1,44 @@
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
 
-# questionaries
+# addressAPI
 
-Questions
+Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/questions]
+## Questions Collection [/Address]
 
-### List All Questions [GET]
 
-+ Response 200 (application/json)
 
-        { "questions":[
-            {
-                "question": "question 1?",
-                "input_type": "text",
-                "mandatory":true,
-                "answer":""
-                    
-            },
-        
+### Create a New Question [POST]
 
-            {
-                
-                "question": "question 2?",
-                "input_type":"radio",
-                "mandatory":false,
-                "answer":"",
-                "options":[
-                            {"id":"Male"},
-                            {"id":"Female"}
-                         ]
-         },
-               
-        
-            {
-                "question": "question 3?",
-                "input_type": "checkbox",
-                "mandatory":true,
-                "answer":[],
-                "options":[
-                             {"id":"Home Address"},
-                             {"id":"Office Address"}
-                         ]
-              },
-              
-            {
-                
-                "question": "question 4?",
-                "input_type": "text",
-                "mandatory":true,
-                "answer":""
-                    
-            },
-            {
-                
-                "question": "question 5?",
-                "input_type": "text",
-                "mandatory":false,
-                "answer":""
-                    
-            }
-        
-        ]
+You may create your own question using this action. It takes a JSON
+object containing a question and a collection of answers in the
+form of choices.
+
++ Request (application/json)
+
+        {
+         "Address": {
+         "name": " ",
+         "Surname": " ",
+         "Phone number": " ",
+         "Address": " "
+         }
         }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /Address/2
+
+    + Body
+
+            {
+              "Address": {
+              "name": "Shabana",
+             "Surname": "shaik ",
+               "Phone number": " 12345",
+                        "Address": "51-980"
+                    }
+                    }
